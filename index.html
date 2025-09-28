@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html class="overflow-hidden" lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google em Tailwind</title>
+  <link rel="shortcut icon" href="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="h-screen flex flex-col justify-between items-center font-[Arial]">
+
+  <header class="-mt-2 w-screen p-4 flex items-center justify-end gap-3">
+
+    <a 
+      class="text-gray-950 text-sm hover:underline cursor-pointer" 
+      href="https://mail.google.com/mail/?authuser=0&ogbl">
+
+      Gmail
+    </a>
+
+    <a 
+      class="text-gray-950 text-sm hover:underline cursor-pointer" 
+      href="https://images.google.com/?hl=pt-br">
+
+      Imagens
+    </a>
+
+    <div class="
+      hover:after:content-['Google_Apps']
+      after:absolute after:top-14 after:text-white hover:after:bg-neutral-600
+      after:px-2 after:rounded after:text-sm/6 after:font-normal
+      cursor-pointer 
+      w-12 h-12 
+      hover:bg-neutral-100
+      flex items-center justify-center 
+      p-2 rounded-full">
+
+      <img
+        class="opacity-60"
+        src="https://ssl.gstatic.com/gb/images/bar/al-icon.png"/>
+    </div>
+
+    <button 
+      class="bg-blue-500 h-8 w-23 rounded text-white text-sm cursor-pointer hover:bg-blue-600 hover:shadow-md"
+      onclick="window.location.href='https://accounts.google.com/ServiceLogin?hl=pt-PT&passive=true&continue=https://www.google.com/&ec=GAZAmgQ'">
+      
+      Entrar
+    </button>
+
+  </header>
+
+
+
+  <main class="flex flex-col justify-between items-center gap-7 -translate-y-12">
+
+    <img 
+      class="w-68"
+      src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" 
+      alt="Google Logo">
+
+    <section 
+      onclick="if(event.target.tagName!=='TEXTAREA' && event.target.tagName!=='IMG'){document.getElementById('search').focus()}"
+      class=" hover:shadow-[0_0_5px_rgba(0,0,0,0.3)] gap-3 flex justify-center items-center h-12 min-w-146 border border-neutral-300 rounded-full">
+
+      <img 
+        class="w-5 opacity-40"
+        src="assets/icone-lupa.svg" 
+        alt="Icone Lupa"> 
+
+      <textarea 
+        class="w-71/100 focus-visible:outline-0 resize-none"
+        rows="1" aria-expanded="false"
+        id="search"></textarea>
+
+      <div class="flex justify-center gap-3 items-center">
+
+        <div class="
+          hover:after:content-['Ferramentas_de_introdução']
+          after:absolute after:-translate-x-43/100 after:translate-y-4
+          after:text-sm/6 hover:after:bg-neutral-600 after:rounded
+          after:px-2 after:text-white text-nowrap">
+          <img
+            class="w-5 h-3 cursor-pointer"
+            src="https://www.gstatic.com/inputtools/images/tia.png"
+            alt="Icone Teclado">
+        </div>
+
+        <div class="
+          hover:after:content-['Pesquisa_por_voz']
+          after:absolute after:-translate-x-43/100 after:translate-y-3
+          after:text-sm/6 hover:after:bg-neutral-600 after:rounded
+          after:px-2 after:text-white text-nowrap">
+          <img
+            class="w-6 cursor-pointer"
+            src="./assets/icone-microfone.svg"
+            alt="Icone Microfone">
+        </div>
+
+        <div class="
+          hover:after:content-['Pesquisa_por_imagem']
+          after:absolute after:-translate-x-43/100 after:translate-y-3
+          after:text-sm/6 hover:after:bg-neutral-600 after:rounded
+          after:px-2 after:text-white
+          text-nowrap">
+          <img
+            class="w-6 cursor-pointer"
+            src="assets/icone-camera.svg"
+            alt="Icone Câmera">
+        </div>
+      </div>
+
+    </section>
+
+    <section class="w-80 flex flex-col text-sm text-[#3c4043] gap-6">
+
+      <div class="flex gap-2 justify-between">
+        <button class="bg-[#f8f9fa] w-38 h-10 rounded cursor-pointer hover:shadow-[0_1_1px_rgba(0,0,0,1)] hover:border hover:border-neutral-300">Pesquisa Google</button>
+        <button class="bg-[#f8f9fa] w-38 h-10 rounded cursor-pointer hover:shadow-[0_1_1px_rgba(0,0,0,1)] hover:border hover:border-neutral-300">Sinto-me com sorte</button>
+      </div>
+
+      <p>Disponibilizado pelo Google em: <a class="text-[#1a0dab] cursor-pointer" href="https://www.google.com/preferences?hl=pt-BR">Português (Brasil)</a></p>
+
+    </section>
+
+
+  </main>
+
+
+  <footer class="w-screen bg-[#f2f2f2] text-[#202124] text-sm">
+    <section class="h-11 py-4 px-8 border-t border-[#dadce0]">
+      <p>Brasil</p>
+    </section>
+
+    <section class="h-12 py-4 px-8 flex justify-between w-screen border-t border-[#dadce0]">
+      <article class="flex gap-7">
+        <a 
+          href="https://about.google/?utm_source=google-BR&utm_medium=referral&utm_campaign=hp-footer&fg=1">
+          Sobre
+        </a>
+        <a 
+          href="https://www.google.com/intl/pt-BR_br/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">
+          Publicidade
+        </a>
+        <a 
+          href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">
+          Negócios
+        </a>
+        <a 
+          href="https://google.com/search/howsearchworks/?fg=1">
+          Como funciona a Pesquisa
+        </a>
+
+      </article>
+
+      <article class="flex gap-7">
+
+        <a 
+          href="https://policies.google.com/privacy?hl=pt-BR&fg=1">
+          Privacidade
+        </a>
+        <a 
+          href="https://policies.google.com/terms?hl=pt-BR&fg=1">
+          Termos
+        </a>
+        <a 
+          href="chrome://settings/">
+          Configurações
+        </a>
+      </article>
+    </section>
+  </footer>
+
+</body>
+
+</html>
